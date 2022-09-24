@@ -1,31 +1,37 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import img from '../images/wearrit.jpg'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import img from '../images/wearrit.jpg';
+import { AiOutlineShoppingCart} from 'react-icons/ai';
+import { MdAccountCircle } from 'react-icons/md'
 
 const Navbar = () => {
   return (
-    <div>
-      <header class="text-gray-600 body-font">
-  <div class="container mx-auto flex flex-wrap p-4 flex-col md:flex-row items-center">
-  <Link href={'/'}> <img src={img} alt='logo' width={70} height={30} /> </Link>             
-    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-      <Link class="mr-5 hover:text-gray-900" to='/'>Home</Link>
-      <Link class="mr-5 hover:text-gray-900" to='/Login'>Login</Link>
-      <Link class="mr-5 hover:text-gray-900" to='/Register'>Sign Up</Link>
-      <Link class="mr-5 hover:text-gray-900">First Link</Link>
+    <div className='flex flex-col md:flex-row md:justify-start justify-between items-center py-1 shadow-md sticky top-0 bg-white z-10'>
+    <div className="logo mx-3">
+        <Link to={'/'}><img src={img} alt='logo' width={70} height={30} /></Link>
+            
       
-    </nav>
-    <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
-      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-        <path d="M5 12h14M12 5l7 7-7 7"></path>
-      </svg>
-    </button>
-  </div>
-</header>
-
-
-
     </div>
+    <div className="nav">
+        <ul className="flex items-center space-x-4 font-medium md:text-md">
+            <Link to={'/Tshirts'}><li className='hover:text-red-500'>Tshirts</li></Link>
+            <Link to={'/Jeans'}><li className='hover:text-red-500'>Jeans</li></Link>
+            <Link to={'/Kids'}><li className='hover:text-red-500'>Kids</li></Link>
+            <Link to={'/Home & Living'}><li className='hover:text-red-500'>Home</li></Link>
+            <Link to={'/Beauty'}><li className='hover:text-red-500'>Beauty</li></Link>
+        </ul>
+    </div>
+    <div className=" cursor-pointer cart absolute right-0 top-4 mx-5 flex ">
+               <Link to={'/login'}><MdAccountCircle className='text-xl md:text-2xl mx-2' /></Link>
+                <AiOutlineShoppingCart className='text-xl md:text-2xl' />
+            </div>
+   
+  </div>
+
+
+
+
+    
   )
 }
 
