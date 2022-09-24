@@ -6,13 +6,11 @@ const Navbar = () => {
   return (
     <div>
       <header class="text-gray-600 body-font">
-  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-  <Link href={'/'}>
-                    <img src={img} alt='logo' width={70} height={30} />
-                </Link>
+  <div class="container mx-auto flex flex-wrap p-4 flex-col md:flex-row items-center">
+  <Link href={'/'}> <img src={img} alt='logo' width={70} height={30} /> </Link>             
     <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
       <Link class="mr-5 hover:text-gray-900" to='/'>Home</Link>
-      <Link class="mr-5 hover:text-gray-900"to='/Login'>Login</Link>
+      <Link class="mr-5 hover:text-gray-900" to='/Login'>Login</Link>
       <Link class="mr-5 hover:text-gray-900" to='/Register'>Sign Up</Link>
       <Link class="mr-5 hover:text-gray-900">First Link</Link>
       

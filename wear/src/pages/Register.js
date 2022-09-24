@@ -28,7 +28,7 @@ const Register = () => {
     .then((res) => {
       if (res.data.success) {
         toast.success('🦄 Yee have Registered  successfully!', {
-          position: "bottom-center",
+          position: "top-center",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
