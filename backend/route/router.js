@@ -9,6 +9,8 @@ const DeleteSinglePd = require('../controller/DeleteOne');
 const UpdatePdct = require('../controller/UpdateProduct');
 const RegisterNew = require('../controller/Register');
 const LoginUser = require('../controller/login');
+const CheckZip = require('../controller/CheckPincode');
+const AddZip = require('../controller/AddPin');
 
 router.post('/AddProduct',AddProduct.newProduct);
 router.get('/GetProducts',GetProducts.getAllProducts);
@@ -17,7 +19,8 @@ router.delete('/DeleteOne/:slug',DeleteSinglePd.delOnePrdt);
 router.patch('/UpdateProduct/:id',UpdatePdct.update);
 router.post('/Register', RegisterNew.Register);
 router.post('/Login', LoginUser.Login);
-
+router.post('/Pincode', CheckZip.CheckPin);
+router.post('/AddPin', AddZip.AddPin);
 
 
 module.exports = router;

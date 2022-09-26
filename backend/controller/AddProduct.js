@@ -1,4 +1,4 @@
-const ProductSchema = require('../model/ProductSchema');
+
 const newPrd = require('../model/ProductSchema');
 const validate = require('../validator/validate')
 

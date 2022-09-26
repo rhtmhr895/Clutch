@@ -17,13 +17,13 @@ const Navbar = () => {
             <Link to={'/Tshirts'}><li className='hover:text-red-500'>Tshirts</li></Link>
             <Link to={'/Jeans'}><li className='hover:text-red-500'>Jeans</li></Link>
             <Link to={'/Kids'}><li className='hover:text-red-500'>Kids</li></Link>
-            <Link to={'/Home & Living'}><li className='hover:text-red-500'>Home</li></Link>
+            <Link to={'/Home_living'}><li className='hover:text-red-500'>Home & Living</li></Link>
             <Link to={'/Beauty'}><li className='hover:text-red-500'>Beauty</li></Link>
         </ul>
     </div>
     <div className=" cursor-pointer cart absolute right-0 top-4 mx-5 flex ">
                <Link to={'/login'}><MdAccountCircle className='text-xl md:text-2xl mx-2' /></Link>
-                <AiOutlineShoppingCart className='text-xl md:text-2xl' />
+               <Link to={'/Checkout'}><AiOutlineShoppingCart className='text-xl md:text-2xl' /></Link>
             </div>
    
   </div>

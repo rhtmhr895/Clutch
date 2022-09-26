@@ -2,7 +2,7 @@ const joi = require('joi');
 
 const validateNewPrd = joi.object({
     category:joi.string().required(),
-    brand:joi.string().alphanum().required(),
+    brand:joi.string().required(),
     slug:joi.string().required(),
     desc:joi.string().required(),
     size:joi.string().required(),
