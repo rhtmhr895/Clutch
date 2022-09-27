@@ -1,3 +1,5 @@
+
+
 const getPrd = require('../model/ProductSchema');
 
 const getAllProducts = (req,res)=>{

@@ -1,7 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link , useParams} from 'react-router-dom';
 
 const Checkout = () => {
+
+
+  let { id } = useParams();
+  console.log('id',id)
+
+
   return (
     <div>
         <section className="text-gray-600 body-font relative">

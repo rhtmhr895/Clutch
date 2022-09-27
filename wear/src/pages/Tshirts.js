@@ -33,7 +33,7 @@ const Tshirts = () => {
                         <div class="container px-5 py-24 mx-auto">
                             <div class="flex flex-wrap -m-4">
                                 <div class="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-2 ">
-                                    <Link passHref={true} key={items._id} to={`/product/${items.slug}`} className="block relative  rounded overflow-hidden">
+                                    <Link passHref={true} key={items._id} to={`/Checkout/${items._id}`} className="block relative  rounded overflow-hidden">
                                         <img alt="wearrit" className=" h-[30vh] md:h-[36vh] block m-auto" src={items.image} />
                                         
                                     </Link>
