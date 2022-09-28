@@ -13,62 +13,9 @@ const LoginUser = require('../controller/login');
 const CheckZip = require('../controller/CheckPincode');
 const AddZip = require('../controller/AddPin');
 
-//====================ROUTINS STARTS HERE====================//
-/**
- * @swagger
- * component:
- *       schema:
- *         Product:
- *            type: object
- *            parameters:
- *                  category:
- *                      type: string
- *                  brand:
- *                      type: string
- *                  slug:
- *                      type: string
- *                  desc:
- *                      type: string
- *                  size:    
- *                      type: string
- *                  availableQty:
- *                      type: number
- *                  image:
- *                      type: string
- *                  price:
- *                      type: number
- *                  color:
- *                      type:string
- */
+//====================ROUTING STARTS HERE====================//
 
-/**
- * @swagger
- * /AddProduct:
- *   post:
- *     summary: Add products to the database
- *     tags: [Posts]
- *     requestBody:
- *          required: true
- *          content:
- *              application/json:
- *                  schema:
- *                        $ref: '#component/schema/Product'
- *     responses:
- *       201:
- *         description: product added to the database
- *         responses:
- *              200:
- *              description: to test post method
- *                  
- *                 
- *              
- *               
- *   
- */
-
-
-
-router.post('/AddProduct',AddProduct.newProduct);
+router.post('/AddProduct', AddProduct.newProduct);
 
 
 /**
@@ -90,7 +37,7 @@ router.post('/AddProduct',AddProduct.newProduct);
  *                 
  */
 
-router.get('/GetProducts',GetProducts.getAllProducts);
+router.get('/GetProducts', GetProducts.getAllProducts);
 /**
  * @swagger
  * /DeleteAll:
@@ -110,15 +57,22 @@ router.get('/GetProducts',GetProducts.getAllProducts);
  *              200:
  *              description: to test post method
  *                  
- *                 
+ *     component:
+ *       schema:
+ *         Product:
+ *           category:
+ *             "type": "string"
+ *           
+ *        
+ *                  
  *              
  *               
  *   
  */
 
-router.delete('/DeleteAll',DeleteProducts.deleteProduct);
-router.delete('/DeleteOne/:slug',DeleteSinglePd.delOnePrdt);
-router.patch('/UpdateProduct/:id',UpdatePdct.update);
+router.delete('/DeleteAll', DeleteProducts.deleteProduct);
+router.delete('/DeleteOne/:slug', DeleteSinglePd.delOnePrdt);
+router.patch('/UpdateProduct/:id', UpdatePdct.update);
 router.post('/Register', RegisterNew.Register);
 router.post('/Login', LoginUser.Login);
 router.post('/Pincode', CheckZip.CheckPin);
