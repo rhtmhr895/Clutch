@@ -3,7 +3,8 @@
 const getPrd = require('../model/ProductSchema');
 
 const getAllProducts = (req,res)=>{
-    getPrd.find({},(err,result)=>{
+    let data = req.query
+    getPrd.find({ "category" : data.cat},(err,result)=>{
         if(err){
             res.status(400).send(err);
         }else{

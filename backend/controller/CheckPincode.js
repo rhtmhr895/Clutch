@@ -1,17 +1,9 @@
 const Pin = require('../model/Pincodes');
 
 const CheckPin = async(req,res)=>{
-    try{
-       let body = req.body;
-       let zip = await Pin.findOne({pincode: body.pincode});
-       if(zip){
-        res.status(200).send("Delivery Available");
-       }else{
-        res.status(400).send("Sorry No pincode available");
-       }
-    }catch(err){
-        res.status(400).send(err)
-    }
+  
+        res.status(200).json([263139,110001, 263639, 263601,248001,248008 ])
+      
 }
 
 module.exports = {CheckPin};

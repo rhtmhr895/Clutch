@@ -2,20 +2,26 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { FaSadTear } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import queryString from 'query-string'
 
 
 const Tshirts = () => {
+    let categ = queryString.parse(window.location.search)
+    let cat = categ.category
+    console.log(cat)
+   
+    
     const [data, setData] = useState([]);
 
     useEffect(() => {
 
-        axios.get('http://localhost:8700/api/GetProducts').then((response) => {
+        axios.get(`http://localhost:8700/api/GetProducts/`, {params:{cat}}).then((response) => {
 
             setData(response.data);
         })
 
 
-    }, [])
+    }, [cat])
     if (!data) return (
         <div>
             <p>Sorry we regret to tell you that Tshirts are out of Stock!!!<FaSadTear className='text-xl md:text-2xl mx-2' />
@@ -27,13 +33,14 @@ const Tshirts = () => {
 
 
         <div>
-            {data.map((items) => {
-                return (
+            
                     <section class="text-gray-600 body-font">
                         <div class="container px-5 py-24 mx-auto">
                             <div class="flex flex-wrap -m-4">
+                            {data.map((items) => {
+                return (
                                 <div class="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-2 ">
-                                    <Link passHref={true} key={items._id} to={`/Checkout/${items._id}`} className="block relative  rounded overflow-hidden">
+                                    <Link passhref={true} key={items._id} to={`/Spec/${items._id}`} className="block relative  rounded overflow-hidden">
                                         <img alt="wearrit" className=" h-[30vh] md:h-[36vh] block m-auto" src={items.image} />
                                         
                                     </Link>
@@ -61,12 +68,13 @@ const Tshirts = () => {
                                         </div>
                                     </div>
                                 </div>
+                               ) })}
                             </div>
 
                         </div>
                     </section>
-                )
-            })}
+                
+            
         </div>
     )
 }

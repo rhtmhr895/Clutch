@@ -10,6 +10,7 @@ import Jeans from './pages/Jeans';
 import Kids from './pages/Kids';
 import HomeLiving from './pages/Home&Living';
 import Checkout from './pages/Checkout';
+import Spec from './Product/Spec';
 
 function App() {
   return (
@@ -17,12 +18,13 @@ function App() {
   <Navbar/>
   <Routes>
     <Route path='/' element={<Home/>}/>
-    <Route path='/Tshirts' element={<Tshirts/>}/>
-    <Route path='/Jeans' element={<Jeans/>}/>
+    <Route path='/Tshirts/' element={<Tshirts/>}/>
+    <Route path='/Jeans/' element={<Jeans/>}/>
     <Route path='/Kids' element={<Kids/>}/>
     <Route path='/Home_living' element={<HomeLiving/>}/>
     <Route path='/Login' element={<Login/>}/>
-    <Route path='/Checkout/:id' element={<Checkout/>}/>
+    <Route path='/Spec/:id' element={<Spec/>}/>
+    <Route path='/Checkout' element={<Checkout/>}/>
     <Route path='/Register' element={<Register/>}/>
   </Routes>
   <Footer/>

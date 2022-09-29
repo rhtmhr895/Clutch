@@ -12,71 +12,20 @@ const RegisterNew = require('../controller/Register');
 const LoginUser = require('../controller/login');
 const CheckZip = require('../controller/CheckPincode');
 const AddZip = require('../controller/AddPin');
+const FindItem = require('../controller/FindOne');
 
 //====================ROUTING STARTS HERE====================//
 
 router.post('/AddProduct', AddProduct.newProduct);
-
-
-/**
- * @swagger
- * /GetProducts:
- *   get:
- *     summary: Returns all products
- *     tags: [Get]
- *     responses:
- *       200:
- *         description: get all products from the database
- *         responses:
- *              200:
- *              description: to test get method
- *                  
- *                 
- *              
- *               
- *                 
- */
-
 router.get('/GetProducts', GetProducts.getAllProducts);
-/**
- * @swagger
- * /DeleteAll:
- *   delete:
- *     summary: Delete all products from the database
- *     tags: [Posts]
- *     requestBody:
- *          required: true
- *          content:
- *              application/json:
- *                  schema:
- *                        $ref: '#component/schema/Product'
- *     responses:
- *       201:
- *         description: all products deleted from the database
- *         responses:
- *              200:
- *              description: to test post method
- *                  
- *     component:
- *       schema:
- *         Product:
- *           category:
- *             "type": "string"
- *           
- *        
- *                  
- *              
- *               
- *   
- */
-
 router.delete('/DeleteAll', DeleteProducts.deleteProduct);
 router.delete('/DeleteOne/:slug', DeleteSinglePd.delOnePrdt);
 router.patch('/UpdateProduct/:id', UpdatePdct.update);
 router.post('/Register', RegisterNew.Register);
 router.post('/Login', LoginUser.Login);
-router.post('/Pincode', CheckZip.CheckPin);
-router.post('/AddPin', AddZip.AddPin);
+router.get('/Pincode', CheckZip.CheckPin);
+//router.post('/AddPin', AddZip.AddPin);
+router.get('/Product/:id', FindItem.FindPD);
 
 
 module.exports = router;
