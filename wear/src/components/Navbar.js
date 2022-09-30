@@ -35,7 +35,7 @@ const Navbar = () => {
         <ul className="flex items-center space-x-4 font-medium md:text-md">
             <Link to={`/Tshirts?category=${'tshirt'}`}><li className='hover:text-red-500'>Tshirts</li></Link>
             <Link to={`/Jeans?category=${'jeans'}`}><li className='hover:text-red-500'>Jeans</li></Link>
-            <Link to={'/Kids'}><li className='hover:text-red-500'>Kids</li></Link>
+            <Link to={'/Men'}><li className='hover:text-red-500'>Kids</li></Link>
             <Link to={'/Home_living'}><li className='hover:text-red-500'>Home & Living</li></Link>
             <Link to={'/Beauty'}><li className='hover:text-red-500'>Beauty</li></Link>
         </ul>

@@ -11,6 +11,7 @@ import Kids from './pages/Kids';
 import HomeLiving from './pages/Home&Living';
 import Checkout from './pages/Checkout';
 import Spec from './Product/Spec';
+import Men from './pages/Men';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
     <Route path='/Spec/:id' element={<Spec/>}/>
     <Route path='/Checkout' element={<Checkout/>}/>
     <Route path='/Register' element={<Register/>}/>
+    <Route path='/Men' element={<Men/>}/>
   </Routes>
   <Footer/>
   </BrowserRouter> 
