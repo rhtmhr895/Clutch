@@ -13,6 +13,7 @@ const LoginUser = require('../controller/login');
 const CheckZip = require('../controller/CheckPincode');
 const AddZip = require('../controller/AddPin');
 const FindItem = require('../controller/FindOne');
+const BeautyAdd = require('../controller/Groom');
 
 //====================ROUTING STARTS HERE====================//
 
@@ -24,7 +25,7 @@ router.patch('/UpdateProduct/:id', UpdatePdct.update);
 router.post('/Register', RegisterNew.Register);
 router.post('/Login', LoginUser.Login);
 router.get('/Pincode', CheckZip.CheckPin);
-//router.post('/AddPin', AddZip.AddPin);
+router.post('/Beauty', BeautyAdd.AddBeauty);
 router.get('/Product/:id', FindItem.FindPD);
 
 

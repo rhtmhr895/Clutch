@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const Register = () => {
   
   const [value, setValue] = useState({
-    fname: '', lname: '', email: '', password: ''
+    fname: '', lname: '', email: '', password: '', role:''
   })
 
 
@@ -80,11 +80,11 @@ const Register = () => {
             <div className="rounded-md shadow-sm -space-y-px">
               <div>
                 <label htmlFor="fname" className="sr-only">First Name</label>
-                <input value={value.fname} onChange={setValues} id="fname" name="fname" type="text" autoComplete="fname" required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm" placeholder="First Name" />
+                <input value={value.fname} onChange={setValues} id="fname" name="fname" type="text"  required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm" placeholder="First Name" />
               </div>
               <div>
                 <label htmlFor="lname" className="sr-only">Last Name</label>
-                <input value={value.lname} onChange={setValues} id="lname" name="lname" type="text" autoComplete="lname" required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm" placeholder="Last Name" />
+                <input value={value.lname} onChange={setValues} id="lname" name="lname" type="text"  required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm" placeholder="Last Name" />
               </div>
               <div>
                 <label htmlFor="email" className="sr-only">Email address</label>
@@ -92,7 +92,11 @@ const Register = () => {
               </div>
               <div>
                 <label htmlFor="password" className="sr-only">Password</label>
-                <input value={value.password} onChange={setValues} id="password" name="password" type="password" autoComplete="current-password" required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm" placeholder="Password" />
+                <input value={value.password} onChange={setValues} id="password" name="password" type="password"  required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm" placeholder="Password" />
+              </div>
+              <div>
+                <label htmlFor="role" className="sr-only">Role</label>
+                <input value={value.role} onChange={setValues} id="role" name="role" type="text"  required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm" placeholder="Role" />
               </div>
             </div>
             <div>

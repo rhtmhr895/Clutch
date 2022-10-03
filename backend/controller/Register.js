@@ -15,6 +15,7 @@ const Register = async(req,res)=>{
                 data :{
                     name:NewUser.name,
                     size: NewUser.email,
+                    role: NewUser.role
                 }
                 
             });

@@ -5,6 +5,7 @@ const LoginForm = new mongoose.Schema({
     lname: { type: String ,required:true},
     email: { type: String ,required:true, unique:true},
     password: { type: String ,required:true},
+    role:{type:Number, required:true}
 },{timestamps: true});
 
 module.exports = mongoose.model('SignUp1', LoginForm);
